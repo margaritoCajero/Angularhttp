@@ -1,0 +1,31 @@
+#twitt{
+/*position:fixed; con fixed pongo el elemento en flotante en una posicion absoluta*/
+width: 80%;/*con widh le digo que lo muestre en todo el ancho*/
+text-align:center;
+margin: 0 auto;
+overflow:auto;
+/*height:150px;
+background-color:blue;*/
+/*padding-top: 8px;comienzo a pintar a partir de 8 px de el borde superior*/
+
+}
+#header{
+width: 80%;
+margin: 0 auto;
+height:70px;
+/*border:1px solid;*/
+}
+#contenedortwitts{
+width: 80%;
+margin: 0 auto;
+height:400px;
+overflow:auto;
+/*border:1px solid;*/
+}
+p{
+color:red;
+}
+
+h2{
+color:green;
+}
