@@ -2,18 +2,23 @@
   var app = angular.module('efra', []);
   
   app.controller('StoreController', ['$http', function($http){
-    
-	this.feedsTwitter = function(){
-            console.log('entro');
+		this.twitter={};
+	this.feedsTwitter = function(artcrt){
             $http({
                 method: 'POST', 
-                url: 'get-tweets.php',
+                url: 'serveryou.php',
+				/*headers: {
+				    Content-Type: 'application / json'
+					Accept: 'application / json'
+				},*/
 				data: {
-				'user':"efra",
-				'pass':"margarito"
+				'usuario':"efra",
+				'password':"margarito"
 				}
             }).success(function(data) {
+				artcrt.twitter=data;
                console.log(data);
+			   
             }).error(function(data, status, headers, config) {
                 console.log('error');
                //$scope.data = status;

@@ -1,12 +1,21 @@
 <html ng-app="efra">
 	<head>
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="estilo.css" />
 		<script type="text/javascript" src="angular.min.js"></script>
 		<script type="text/javascript" src="app.js"></script>
 	</head>
 	<body  ng-controller="StoreController as artcrt">
-	<h3>twitter</h3>
-		<button class="btn btn-primary pull-left" ng-click="artcrt.feedsTwitter()">twitts</button>
+	<div id="header">
+		<h2>twitter <button class="btn btn-primary pull-right" ng-click="artcrt.feedsTwitter(artcrt)">Cargar tweets</button>
+		</h2>
+		<hr></div><div id="contenedortwitts">
+		<div  id="twitt" class="well" ng-repeat="tw in artcrt.twitter">
+		
+		<label>{{tw.retweeted_status.user.name}}</label><p>{{tw.user.name}}</p>
+		<p>{{tw.text}}</p>
+		<p>{{tw.created_at}}</p>
+		</div><div>
 	</body>
 </html>
 
